@@ -5,47 +5,8 @@
 int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
 
-    int votosA = 0, votosB = 0, votosC = 0, brancos = 0, nulos = 0, voto, votosTotais = 0;
+    int votosA = 0, votosB = 0, votosC = 0, brancos = 0, nulos = 0, voto = -1, votosTotais = 0;
     float porcentagemA, porcentagemB, porcentagemC;
-
-    system("clear");
-
-    printf("Sistema de votação");
-    printf("\nEm qual candidato você deseja votar? Digite a opção abaixo:");
-    printf("\n1 - Candidato A; 2 - Candidato B; 3 - Candidato C; 4 - Votar em Branco; 5 - Anular voto; 0 - Encerrar Programa;\n");
-    scanf("%d", &voto);
-
-    if(voto == 1) {
-        votosA++;
-        votosTotais++;
-    } 
-    
-    if(voto == 2) {
-        votosB++;
-        votosTotais++;
-    }
-    
-    if(voto == 3) {
-        votosC++;
-        votosTotais++;
-    }
-    
-    if(voto == 4) {
-        brancos++;
-        votosTotais++;
-    }
-    
-    if(voto == 5) {
-        nulos++;
-        votosTotais++;
-    }
-    
-    if((voto == 0) || (voto > 5)) {
-        system("clear");
-        printf("\nSistema de votação");
-        printf("\nOpção inválida! Sistema encerrado.\n");
-        return 0;
-    }
 
     system("clear");
 
@@ -95,6 +56,8 @@ int main() {
     porcentagemA = (float) votosA / votosTotais * 100;
     porcentagemB = (float) votosB / votosTotais * 100;
     porcentagemC = (float) votosC / votosTotais * 100;
+
+    system("clear");
 
     printf("\nSistema de votação");
     printf("\n***** RESULTADOS *****");
